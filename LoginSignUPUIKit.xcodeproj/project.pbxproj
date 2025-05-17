@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0FE51AC62DD6D747005484A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0FE51AC52DD6D747005484A3 /* FirebaseAuth */; };
+		0FE51AC82DD6D747005484A3 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0FE51AC72DD6D747005484A3 /* FirebaseDatabase */; };
+		0FE51ACA2DD6D747005484A3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0FE51AC92DD6D747005484A3 /* FirebaseFirestore */; };
+		0FE51ACC2DD6D747005484A3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0FE51ACB2DD6D747005484A3 /* FirebaseMessaging */; };
+		0FE51AD12DD761DA005484A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE51AD02DD761DA005484A3 /* CoreData.framework */; };
+		0FE51ADE2DD86333005484A3 /* UserEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE51ADC2DD86333005484A3 /* UserEntity+CoreDataClass.swift */; };
+		0FE51ADF2DD86333005484A3 /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE51ADD2DD86333005484A3 /* UserEntity+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0FE51A972DD65C40005484A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +37,9 @@
 		0FE51A802DD65C3E005484A3 /* LoginSignUPUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginSignUPUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE51A962DD65C40005484A3 /* LoginSignUPUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginSignUPUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE51AA02DD65C40005484A3 /* LoginSignUPUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginSignUPUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FE51AD02DD761DA005484A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0FE51ADC2DD86333005484A3 /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0FE51ADD2DD86333005484A3 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -65,6 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE51AD12DD761DA005484A3 /* CoreData.framework in Frameworks */,
+				0FE51ACC2DD6D747005484A3 /* FirebaseMessaging in Frameworks */,
+				0FE51AC82DD6D747005484A3 /* FirebaseDatabase in Frameworks */,
+				0FE51AC62DD6D747005484A3 /* FirebaseAuth in Frameworks */,
+				0FE51ACA2DD6D747005484A3 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,9 +106,12 @@
 		0FE51A772DD65C3E005484A3 = {
 			isa = PBXGroup;
 			children = (
+				0FE51ADC2DD86333005484A3 /* UserEntity+CoreDataClass.swift */,
+				0FE51ADD2DD86333005484A3 /* UserEntity+CoreDataProperties.swift */,
 				0FE51A822DD65C3E005484A3 /* LoginSignUPUIKit */,
 				0FE51A992DD65C40005484A3 /* LoginSignUPUIKitTests */,
 				0FE51AA32DD65C40005484A3 /* LoginSignUPUIKitUITests */,
+				0FE51ACF2DD761D9005484A3 /* Frameworks */,
 				0FE51A812DD65C3E005484A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +124,14 @@
 				0FE51AA02DD65C40005484A3 /* LoginSignUPUIKitUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0FE51ACF2DD761D9005484A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FE51AD02DD761DA005484A3 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +154,10 @@
 			);
 			name = LoginSignUPUIKit;
 			packageProductDependencies = (
+				0FE51AC52DD6D747005484A3 /* FirebaseAuth */,
+				0FE51AC72DD6D747005484A3 /* FirebaseDatabase */,
+				0FE51AC92DD6D747005484A3 /* FirebaseFirestore */,
+				0FE51ACB2DD6D747005484A3 /* FirebaseMessaging */,
 			);
 			productName = LoginSignUPUIKit;
 			productReference = 0FE51A802DD65C3E005484A3 /* LoginSignUPUIKit.app */;
@@ -208,6 +241,9 @@
 			);
 			mainGroup = 0FE51A772DD65C3E005484A3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0FE51AC42DD6D747005484A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0FE51A812DD65C3E005484A3 /* Products */;
 			projectDirPath = "";
@@ -249,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE51ADE2DD86333005484A3 /* UserEntity+CoreDataClass.swift in Sources */,
+				0FE51ADF2DD86333005484A3 /* UserEntity+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +332,6 @@
 				INFOPLIST_FILE = LoginSignUPUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +359,6 @@
 				INFOPLIST_FILE = LoginSignUPUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -571,6 +607,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0FE51AC42DD6D747005484A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0FE51AC52DD6D747005484A3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FE51AC42DD6D747005484A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		0FE51AC72DD6D747005484A3 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FE51AC42DD6D747005484A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		0FE51AC92DD6D747005484A3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FE51AC42DD6D747005484A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0FE51ACB2DD6D747005484A3 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FE51AC42DD6D747005484A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0FE51A782DD65C3E005484A3 /* Project object */;
 }
