@@ -12,6 +12,7 @@ class LoginViewController: UIViewController{
     let passwordTextField = UITextField()
     let button = UIButton(type: .system)
     let messageLabel = UILabel()
+    let toggleButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,16 @@ class LoginViewController: UIViewController{
         passwordTextField.layer.borderWidth = 0.5
         passwordTextField.layer.borderColor = UIColor.black.cgColor
         passwordTextField.layer.cornerRadius = 8
+        passwordTextField.isSecureTextEntry = true
         view.addSubview(passwordTextField)
+        
+        toggleButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        toggleButton.tintColor = .gray
+        toggleButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        toggleButton.addTarget(self, action: #selector(togglePasswordVisible), for: .touchUpInside)
+        
+        passwordTextField.rightView = toggleButton
+        passwordTextField.rightViewMode = .always
         
         
         //Login Button
@@ -100,5 +110,12 @@ class LoginViewController: UIViewController{
             passwordTextField.text,
         ])
         return message ?? ""
+    }
+    
+    @objc func togglePasswordVisible(){
+        passwordTextField.isSecureTextEntry.toggle()
+        
+        let image = passwordTextField.isSecureTextEntry ? "eye.slash" : "eye"
+        toggleButton.setImage(UIImage(systemName: image), for: .normal)
     }
 }

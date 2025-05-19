@@ -52,9 +52,6 @@ class HomeViewController: UIViewController {
                 emailLabel.text = "Email: \(user.email ?? "No Email")"
                 ageLabel.text = "Age: \(user.age)"
                 
-                print("Name: \(user.name) ?? \("No Name")")
-                print("Email: \(user.email) ?? \("No Email")")
-                print("Age: \(user.age) ?? \("No Age")")
             } else {
                 nameLabel.text = "No user found."
             }
